@@ -9,13 +9,19 @@ public class Employee extends Person {
     private String name ;
     private int age ;
     private String sex;
-    private int Salary;
+    private int salary;
+    private int salary_per_day;
+
 
 
     public boolean isSameName(Employee employee){
-        if (employee.name.equals(name)){
+        if (this.name.equals(name)){
             return true;
         }
         return false;
+    }
+
+    public int getSalary (){
+        return salary_per_day*salary;
     }
 }

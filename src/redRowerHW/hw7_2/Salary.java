@@ -7,7 +7,9 @@ public class Salary {
     public int getSum(Employee[] employeeArray){
         int sum = 0;
         for (int i = 0; i < employeeArray.length; i++) {
-            sum+= new Integer(String.valueOf(employeeArray[i]));
+            Employee employee = employeeArray[i];
+            sum+=employee.getSalary();
+            // sum+= new Integer(String.valueOf(employeeArray[i]));
         }
         return sum;
     }
